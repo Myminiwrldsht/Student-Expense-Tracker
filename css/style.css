@@ -8,6 +8,29 @@
 *, *::before, *::after {box-sizing:border-box; 
 margin: 0;}
 
+.glass {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 32px rgba(18, 53, 36, 0.12);
+  border-radius: 12px;
+  margin: 60px;
+  align-items: center;
+  justify-content: center;
+}
+
+
+body {
+  font-family: "Outfit", san-serif;
+  background-color: var(--bg);
+  background-image: url('../assets/student.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
 .signInCardHidden { /*Hides the sign-in card by default*/
   display: none !important;
 }
@@ -33,7 +56,7 @@ margin: 0;}
 }
 
 .logo-accent {
-  color: var(--green)
+  color: var(--green);
 }
 .short-description {
   font-size: 0.7rem;
@@ -57,4 +80,52 @@ margin: 0;}
 
 .nav-links a {
   text-decoration: none;
+  color: var(--green);
+}
+
+.nav-links a:hover {
+  color: var(--ink);
+}
+
+.hero .glass{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 120px 60px;
+  background: var(--bg);
+ 
+}
+
+.hero h1 {
+  font-family:"";
+  font-size: 3rem;
+  color: var(--ink);
+  text-align: center;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 16px auto 24px; /*"auto" centres the block*/
+  padding:10px;
+}
+
+.btn-1 {
+  background: var(--green);
+  color: #ffffff;
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  border-radius: 30px;
+  padding: 10px 24px;
+  text-decoration: none;
+}
+
+.hero a:hover {
+  font-size:larger;
+  color: var(--ink);
+  background-color: var(--green-light);
+  transition: transform 0.2s ease;
+
 }
