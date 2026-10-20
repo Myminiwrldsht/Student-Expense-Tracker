@@ -15,20 +15,28 @@ margin: 0;}
   box-shadow: 0 8px 32px rgba(18, 53, 36, 0.12);
   border-radius: 12px;
   margin: 60px;
-  align-items: center;
-  justify-content: center;
+  
+
 }
 
 
 body {
-  font-family: "Outfit", san-serif;
+  font-family: "Outfit", sans-serif;
   background-color: var(--bg);
   background-image: url('../assets/student.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  min-height: 100vh;
+  position: relative;
+  margin: 0;
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
+
 
 
 .signInCardHidden { /*Hides the sign-in card by default*/
@@ -50,7 +58,7 @@ body {
 }
 .logo-text {
   color: var(--ink);
-  font-family: "Outfit", san-serif;
+  font-family: "Outfit", sans-serif;
   font-weight: 700;
 
 }
@@ -87,18 +95,17 @@ body {
   color: var(--ink);
 }
 
-.hero .glass{
+.hero.glass{
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   padding: 120px 60px;
-  background: var(--bg);
+  
  
 }
 
 .hero h1 {
-  font-family:"";
   font-size: 3rem;
   color: var(--ink);
   text-align: center;
@@ -128,4 +135,12 @@ body {
   background-color: var(--green-light);
   transition: transform 0.2s ease;
 
+}
+
+.footer {
+  margin-top: auto; /*Pushes footer to bottom of the pagee*/
+  text-align: center;
+  padding: 20px;
+  color: var(--ink);
+  
 }
