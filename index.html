@@ -13,16 +13,32 @@
 </head>
 
 <body>
-  <!-- Logo -->
+<!--Navigation bar-->
+<nav class="navbar">
+  <!--Logo-->
   <div class="logo-container">
-    <img src="assets/moneywisely-icon.svg" class="logo-img" alt="">
-    <span class="logo-text">MoneyWisely</span>
+        <img src="assets/moneywisely-icon.svg" class="logo-img" alt="">
+        <div class="text-block">
+    <span class="logo-text">Money<span class="logo-accent">Wisely</span></span>
+    <span class="short-description">STUDENT WORKSPACE</span>
+    </div>
   </div>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#get-started">Get Started</a></li>
+
+  </ul>
+  
+
+
+</nav>
+
 
   <!-- Page header -->
-  <header class="header">
+  <header class="hero" id="home">
     <h1>Welcome to MoneyWisely</h1>
     <p>Try MoneyWisely in demo mode. No password needed.</p>
+    <a href="#get-started" class="btn-1">Get Started</a>
   </header>
 
   <!-- Display-name input form/ sign-in card -->
@@ -31,7 +47,7 @@
     <form id="signInForm">
       <label for="username-field">Display name</label>
       <input type="text" id="username-field" name="displayname" placeholder="Maya" maxlength="20" required>
-      <button class="btn-1" type="submit">Continue</button>
+      <button class="btn-2" type="submit">Continue</button>
     </form>
 
     <div class="note">
