@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -26,18 +26,18 @@
   </header>
 
   <!-- Display-name input form/ sign-in card -->
-  <div class="sign-in-container">
+  <section id="signInCardView" class="signInCardHidden">
     <!-- "id" is used by app.js to read the form-->
     <form id="signInForm">
       <label for="username-field">Display name</label>
-      <input type="text" id="username-field" name="displayname" placeholder="Jane Doe" maxlength="20" required>
+      <input type="text" id="username-field" name="displayname" placeholder="Maya" maxlength="20" required>
       <button class="btn-1" type="submit">Continue</button>
     </form>
 
     <div class="note">
       <p>This demo stores data only in this browser</p>
     </div>
-  </div>
+  </section>
 
 <!-- script tag used to connect this HTML file to app.js-->
   <script src="js/app.js"></script>

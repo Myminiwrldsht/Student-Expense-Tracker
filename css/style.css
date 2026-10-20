@@ -1,0 +1,14 @@
+/* Page colors variable */
+:root {
+  --green: #1F7A4D; /* Main branding green: buttons, links, active states*/
+  --green-light: #3DBE74;/* Lighter green: accents and highlights*/
+  --ink: #123524;/*Dark green: */
+  --bg: #F4FAF6;/**/
+}
+*, *::before, *::after {box-sizing:border-box; 
+margin: 0;}
+
+.signInCardHidden {
+  display: none !important;
+}
+
