@@ -106,7 +106,8 @@ body {
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 7vw, 3rem); /*sets the minimum width, preferred width and the maximum width respectively*/
+  overflow-wrap: break-word;
   color: var(--ink);
   text-align: center;
 }
@@ -143,4 +144,19 @@ body {
   padding: 20px;
   color: var(--ink);
   
+}
+
+@media (max-width: 600px) {
+  .glass {
+    margin: 20px 16px;
+  }
+
+  .hero.glass {
+    padding: 48px 20px;
+  }
+
+ .navbar {
+    flex-direction: column;
+    gap: 12px;
+  }
 }
