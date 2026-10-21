@@ -3,7 +3,7 @@
   --green: #1F7A4D; /* Main branding green: buttons, links, active states*/
   --green-light: #3DBE74;/* Lighter green: accents and highlights*/
   --ink: #123524;/*Dark green: */
-  --bg: #F4FAF6;/**/
+  --bg: #F4FAF6;/*White for the background*/
 }
 *, *::before, *::after {box-sizing:border-box; 
 margin: 0;}
@@ -21,7 +21,7 @@ margin: 0;}
 
 
 body {
-  font-family: "Outfit", sans-serif;
+  font-family: sans-serif;
   background-color: var(--bg);
   background-image: url('../assets/student2.png');
   background-size: cover;
@@ -58,7 +58,7 @@ body {
 }
 .logo-text {
   color: var(--ink);
-  font-family: "Outfit", sans-serif;
+  font-family: sans-serif;
   font-weight: 700;
 
 }
