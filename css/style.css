@@ -42,7 +42,7 @@ body {
 
 
 
-.signInCardHidden { /*Hides the sign-in card by default*/
+.hidden { /*Hides the sign-in card by default*/
   display: none !important;
 }
 
@@ -131,13 +131,14 @@ body {
   border-radius: 30px;
   padding: 10px 24px;
   text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .hero a:hover {
-  font-size:larger;
+  font-size: larger;
   color: var(--ink);
   background-color: var(--green-light);
-  transition: transform 0.2s ease;
+  transform: scale(1.05);
 
 }
 

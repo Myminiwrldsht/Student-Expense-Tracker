@@ -31,14 +31,16 @@
 
 
   <!-- Page header -->
+   <div id="landingView">
   <header class="hero glass" id="home">
     <h1>Welcome to MoneyWisely</h1>
     <p>Try MoneyWisely in demo mode where no passwords are needed. Track your campus-life expenses</p>
-    <a href="#get-started" class="btn-1">Get Started</a>
+    <a href="#get-started" class="btn-1" id="getStartedButton">Get Started</a>
   </header>
+</div>
 
   <!-- Display-name input form/ sign-in card -->
-  <section id="signInCardView" class="signInCardHidden glass">
+  <section id="signInCardView" class="hidden glass">
     <!-- "id" is used by app.js to read the form-->
     <form id="signInForm">
       <label for="username-field">Display name</label>
@@ -51,10 +53,10 @@
     </div>
   </section>
 
-  <footter class="footer">
+  <footer class="footer">
     <p>&copy; 2026 MoneyWisely. All rights reserved by Maya</p>
     <p>A student project</p>
-  </footter>
+  </footer>
 
 <!-- script tag used to connect this HTML file to app.js-->
   <script src="js/app.js"></script>
