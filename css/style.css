@@ -11,6 +11,7 @@ margin: 0;} /**/
 html {
   scroll-behavior: smooth;
 }
+
 .glass {
   background: rgba(255, 255, 255, 0.45);
   backdrop-filter: blur(12px);
@@ -26,7 +27,7 @@ html {
 body {
   font-family: sans-serif;
   background-color: var(--bg);
-  background-image: url('../assets/student3.png');
+ /* background-image: url('../assets/student3.png');*/
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -44,7 +45,7 @@ body {
 
 .hidden { /*Hides the sign-in card by default*/
   display: none !important;
-  
+
 }
 
 .logo-container {
