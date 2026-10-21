@@ -45,13 +45,17 @@
     <form id="signInForm">
       <label for="username-field">Display name</label>
       <input type="text" id="username-field" name="displayname" placeholder="Maya" maxlength="20" required>
-      <button class="btn-2" type="submit">Continue</button>
+      <button class="btn-2" type="submit" id="signInButton">Continue</button>
     </form>
 
     <div class="note">
       <p>This demo stores data only in this browser</p>
     </div>
   </section>
+
+ <section id="dashboardView" class="hidden">
+  <h2>Hi, <span id="userDemoName"></span></h2>
+ </section>
 
   <footer class="footer">
     <p>&copy; 2026 MoneyWisely. All rights reserved by Maya</p>

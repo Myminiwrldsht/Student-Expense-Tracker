@@ -44,6 +44,7 @@ body {
 
 .hidden { /*Hides the sign-in card by default*/
   display: none !important;
+  
 }
 
 .logo-container {
