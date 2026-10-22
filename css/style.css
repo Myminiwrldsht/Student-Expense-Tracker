@@ -1,14 +1,22 @@
+/*Global styles*/
 /* Page colors(green theme) variable */
 :root {
-  --green: #1F7A4D; /* Main branding green: buttons, links, active states*/
-  --green-light: #3DBE74;/* Lighter green: accents and highlights*/
-  --ink: #123524;/*Dark green: */
-  --bg: #F4FAF6;/*pale green for the background*/
+  --green: #1F7A4D;
+  /* Main branding green: buttons, links, active states*/
+  --green-light: #3DBE74;
+  /* Lighter green: accents and highlights*/
+  --ink: #123524;
+  /*Dark green: */
+  --bg: #F4FAF6;
+  /*pale green for the background*/
 }
+
 * {
-  box-sizing:border-box; 
+  box-sizing: border-box;
   margin: 0;
-} /**/
+}
+
+/**/
 
 html {
   scroll-behavior: smooth;
@@ -21,8 +29,6 @@ html {
   box-shadow: 0 8px 32px rgba(18, 53, 36, 0.12);
   border-radius: 12px;
   margin: 60px;
-  
-
 }
 
 
@@ -42,12 +48,10 @@ body {
 }
 
 
+/*activate hidden style*/
 
-.hidden { /*Hides the sign-in card by default*/
-  display: none !important;
 
-}
-
+/*SIgn in form styles*/
 #signInForm {
   display: flex;
   flex-direction: column;
@@ -61,20 +65,16 @@ body {
   font-weight: 600;
   color: var(--ink);
   font-family: sans-serif;
-
-
 }
 
 #signInForm input {
- padding: 12px 14px;
- border: 1px solid rgba(18, 53, 36, 0.25);
- border-radius: 10px;
- background: rgba(255, 255, 255, 0.7);
- font-family: sans-serif;
- border-color: var(--green);
- outline: none ;
-
-
+  padding: 12px 14px;
+  border: 1px solid rgba(18, 53, 36, 0.25);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  font-family: sans-serif;
+  border-color: var(--green);
+  outline: none;
 }
 
 .btn-2 {
@@ -83,14 +83,14 @@ body {
   border-radius: 30px;
   background: var(--green);
   color: #fff;
-cursor: pointer;
-transition: transform 0.2s ease, background-color 0.2s ease;
-font-family: sans-serif;
-  
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  font-family: sans-serif;
+
 }
 
 .btn-2:hover {
-background: var(--green-light);
+  background: var(--green-light);
   color: var(--ink);
   transform: scale(1.02);
 }
@@ -104,7 +104,7 @@ background: var(--green-light);
 
 
 
-
+/*LandingView styles*/
 .logo-container {
   display: flex;
   flex-direction: row;
@@ -114,10 +114,11 @@ background: var(--green-light);
 
 .text-block {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   align-items: flex-start;
   gap: 2px;
 }
+
 .logo-text {
   color: var(--ink);
   font-family: sans-serif;
@@ -128,6 +129,7 @@ background: var(--green-light);
 .logo-accent {
   color: var(--green);
 }
+
 .short-description {
   font-size: 0.7rem;
   letter-spacing: 0.1em;
@@ -145,7 +147,7 @@ background: var(--green-light);
   display: flex;
   gap: 24px;
   list-style: none;
-  
+
 }
 
 .nav-links a {
@@ -157,18 +159,19 @@ background: var(--green-light);
   color: var(--ink);
 }
 
-.hero.glass{
+.hero.glass {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   padding: 120px 60px;
-  
- 
+
+
 }
 
 .hero h1 {
-  font-size: clamp(2rem, 7vw, 3rem); /*sets the minimum width, preferred width and the maximum width respectively*/
+  font-size: clamp(2rem, 7vw, 3rem);
+  /*sets the minimum width, preferred width and the maximum width respectively*/
   overflow-wrap: break-word;
   color: var(--ink);
   text-align: center;
@@ -176,8 +179,9 @@ background: var(--green-light);
 
 .hero p {
   max-width: 600px;
-  margin: 16px auto 24px; /*"auto" centres the block*/
-  padding:10px;
+  margin: 16px auto 24px;
+  /*"auto" centres the block*/
+  padding: 10px;
 }
 
 .btn-1 {
@@ -201,25 +205,29 @@ background: var(--green-light);
 }
 
 .footer {
-  margin-top: auto; /*Pushes footer to bottom of the pagee*/
+  margin-top: auto;
+  /*Pushes footer to bottom of the pagee*/
   text-align: center;
   padding: 20px;
   color: var(--ink);
-  
+
 }
 
+
+/*DashboardView styles*/
 #dashboardView .dash-header {
-display: flex;
-justify-content: space-between;
-align-items: flex-start;
-gap: 16px;
-flex-wrap: wrap;
-padding: 24px 32px;
-font-weight: lighter;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 24px 32px;
+  font-weight: lighter;
 }
+
 .dash-header h2 {
-   font-size: clamp(2rem, 7vw, 3rem);
-   
+  font-size: clamp(2rem, 7vw, 3rem);
+
 
 }
 
@@ -238,7 +246,8 @@ font-weight: lighter;
 
 .dash-header .dash-actions {
 
-  gap: 24px; /*same as the nav links*/ 
+  gap: 24px;
+  /*same as the nav links*/
   display: flex;
 }
 
@@ -278,7 +287,7 @@ font-weight: lighter;
   align-items: center;
   gap: 12px;
   flex-wrap: wrap;
-  
+
 }
 
 .overview-header h3 {
@@ -308,7 +317,7 @@ font-weight: lighter;
   padding: 16px;
   border-radius: 14px;
   border: 1px solid var(--green);
-  
+
 }
 
 .stats .stat-label {
@@ -325,6 +334,62 @@ font-weight: lighter;
   font-size: 0.8rem;
 }
 
+/*Expense form styles*/
+
+#expenseForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 32px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#expenseForm label {
+  font-weight: 600;
+  color: var(--ink);
+  
+
+}
+
+#expenseForm input {
+   padding: 12px 14px;
+  border: 1px solid rgba(18, 53, 36, 0.25);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  font-family: sans-serif;
+  border-color: var(--green);
+  outline: none;
+
+}
+
+#expenseForm button {
+  padding: 12px;
+  border: none;
+  border-radius:  30px;
+  background-color: var(--green);
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+#expenseForm button:hover {
+  background-color: var(--green-light);
+  color: var(--ink);
+  transform: scale(1.0);
+}
+
+#expenseForm select {
+  outline: none;
+  padding: 5px;
+  border-color: var(--green);
+  border-radius: 10px;
+}
+
+#expenseForm option {
+  color: var(--green);
+ 
+}
 
 
 
@@ -339,11 +404,7 @@ font-weight: lighter;
 
 
 
-
-
-
-
-
+/*Media queries*/
 @media (max-width: 600px) {
   .glass {
     margin: 20px 16px;
@@ -353,7 +414,7 @@ font-weight: lighter;
     padding: 48px 20px;
   }
 
- .navbar {
+  .navbar {
     flex-direction: column;
     gap: 12px;
   }
