@@ -9,6 +9,7 @@
 </head>
 
 <body>
+
 <!--Navigation bar-->
 <nav class="navbar">
   <!--Logo-->
@@ -25,8 +26,6 @@
 
   </ul>
   
-
-
 </nav>
 
 
@@ -51,8 +50,10 @@
     <div class="note">
       <p>This demo stores data only in this browser</p>
     </div>
-  </section>
+  </section> <!--sign in form section closing tag-->
+
 <section id="dashboardView" class="hidden">
+
   <!--dashboard header-->
  <header class="dash-header">
   <div>
@@ -63,8 +64,6 @@
   <div class="dash-actions">
     <select id="semesterSelection">
       <option>1st Semester</option>
-      <option>2nd Semester</option>
-      <option>3rd Semester</option>
     </select>
     <button id="addExpenseButton" type="button">+ Add</button>
   </div>
@@ -101,17 +100,40 @@
 </section><!--form section closing tag-->
 
 
-<!--overview cards-->
-<!--
+<!--overview card container-->
+
 <section class="overview glass">
   <div class="overview-header">
     <h3>Semester spending overview</h3>
-    <span class="ch">2nd semester</span>
+    <span class="chip">1st semester</span>
+    <span class="chip" id="budgetStatus">Within budget</span>
   </div>
+ <!--overview stat cards-->
+  <div class="stats">
+    <div class="statCard">
+      <p class="stat-label">Total spent</p>
+      <p class="stat-value" id="totalSpent">Ksh.0</p>
+      <p class="stat-note" id="toSpendNote"></p>
+    </div>
+    <div class="statCard">
+      <p class="stat-label">Largest category</p>
+      <p class="stat-value" id="largestCategory">-</p>
+      <p class="stat-note" id="largestNote"></p>
+    </div>
+    <div class="statCard">
+      <p class="stat-label">Budget used</p>
+      <p class="stat-value" id="budgetUsed">0%</p>
+      <p class="stat-note">Keep room for essentials</p>
+    </div>
+    <div class="statCard">
+      <p class="stat-label">Remaining</p>
+      <p class="stat-value" id="remaining">Ksh.0</p>
+      <p class="stat-note" id="remainingNote"></p>
+    </div>
+  </div>
+</section> <!--overview cards section closing tag-->
 
-</section>
->
- </section> dashboardView section closing tag-->
+ </section> <!--dashboardView section closing tag-->
 
   <footer class="footer">
     <p>&copy; 2026 MoneyWisely. All rights reserved by Maya</p>
