@@ -41,7 +41,7 @@
 
   <!-- Display-name input form/ sign-in card -->
   <section id="signInCardView" class="hidden glass">
-    <!-- "id" is used by app.js to read the form-->
+    
     <form id="signInForm">
       <label for="username-field">Display name</label>
       <input type="text" id="username-field" name="displayname" placeholder="Maya" maxlength="20" required>
@@ -52,10 +52,66 @@
       <p>This demo stores data only in this browser</p>
     </div>
   </section>
+<section id="dashboardView" class="hidden">
+  <!--dashboard header-->
+ <header class="dash-header">
+  <div>
+  <p>YOUR SEMESTER, AT A GLANCE</p>
+  <h2>A clearer picture, <span id="userDemoName"></span></h2>
+  <p>Track tuition, books, meals, and campus life so you can stay on budget this semester.</p>
+  </div>
+  <div class="dash-actions">
+    <select id="semesterSelection">
+      <option>1st Semester</option>
+      <option>2nd Semester</option>
+      <option>3rd Semester</option>
+    </select>
+    <button id="addExpenseButton" type="button">+ Add</button>
+  </div>
+ </header>
 
- <section id="dashboardView" class="hidden">
-  <h2>Hi, <span id="userDemoName"></span></h2>
- </section>
+
+
+<!--expense form-->
+<section id="expenseFormView" class="hidden glass">
+  <form id="expenseForm">
+    <label for="description">Description</label>
+    <input type="text" id="description" name="description" required>
+
+    <label for="amount">Amount (Ksh)</label>
+    <input type="number" id="amount" name="amount" min="50" required>
+
+    <label for="category">Category</label>
+    <select id="category" name="category" required>
+      <option value="">Choose a category</option>
+      <option value="tuition">Tuition</option>
+      <option value="Books">Books</option>
+      <option value="dining">Dining</option>
+      <option value="campusLife">Campus life</option>
+    </select>
+
+    <label for="date">Date</label>
+    <input type="date" id="date" name="date" required>
+
+    <button type="submit">Add expense</button>
+
+
+  </form>
+ 
+</section><!--form section closing tag-->
+
+
+<!--overview cards-->
+<!--
+<section class="overview glass">
+  <div class="overview-header">
+    <h3>Semester spending overview</h3>
+    <span class="ch">2nd semester</span>
+  </div>
+
+</section>
+>
+ </section> dashboardView section closing tag-->
 
   <footer class="footer">
     <p>&copy; 2026 MoneyWisely. All rights reserved by Maya</p>

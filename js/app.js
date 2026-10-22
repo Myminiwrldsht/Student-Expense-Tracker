@@ -19,7 +19,7 @@ signInForm.addEventListener("submit", (event) => {
     if(name === "") { //if input field is empty, stop
         return;
     } 
-    try {localStorage.setItem("displayName", name); }catch (e) {} 
+    try {localStorage.setItem("displayName", name); }catch (error) {} 
 
     userName.textContent = name;
     signInView.classList.add("hidden");

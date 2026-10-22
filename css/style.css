@@ -27,7 +27,7 @@ html {
 body {
   font-family: sans-serif;
   background-color: var(--bg);
- /* background-image: url('../assets/student3.png');*/
+  background-image: url('../assets/student3.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -99,12 +99,6 @@ font-family: sans-serif;
   color: var(--ink);
   font-family: sans-serif;
 }
-
-
-
-
-
-
 
 
 
