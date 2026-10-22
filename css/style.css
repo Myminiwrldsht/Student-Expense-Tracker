@@ -5,8 +5,10 @@
   --ink: #123524;/*Dark green: */
   --bg: #F4FAF6;/*pale green for the background*/
 }
-* {box-sizing:border-box; 
-margin: 0;} /**/
+* {
+  box-sizing:border-box; 
+  margin: 0;
+} /**/
 
 html {
   scroll-behavior: smooth;
@@ -33,12 +35,10 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-height: 100vh;
-  position: relative;
   margin: 0;
   padding-bottom: 60px;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
 }
 
 
@@ -57,7 +57,7 @@ body {
   margin: 0 auto;
 }
 
-#signInForm Label {
+#signInForm label {
   font-weight: 600;
   color: var(--ink);
   font-family: sans-serif;
@@ -84,15 +84,15 @@ body {
   background: var(--green);
   color: #fff;
 cursor: pointer;
-transition: background-color 0.2s ease;
+transition: transform 0.2s ease, background-color 0.2s ease;
 font-family: sans-serif;
   
 }
 
 .btn-2:hover {
-  font-size: larger;
-  background: var(--green-light);
+background: var(--green-light);
   color: var(--ink);
+  transform: scale(1.02);
 }
 
 .note {
@@ -194,7 +194,6 @@ font-family: sans-serif;
 }
 
 .hero a:hover {
-  font-size: larger;
   color: var(--ink);
   background-color: var(--green-light);
   transform: scale(1.05);
@@ -263,6 +262,68 @@ font-weight: lighter;
   font-family: sans-serif;
 }
 
+.dash-actions button:hover {
+  background: var(--green-light);
+  color: var(--ink);
+}
+
+/*overview card container section*/
+#overview {
+  padding: 24px;
+
+}
+
+#overview .overview-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  
+}
+
+.overview-header h3 {
+  color: var(--ink);
+
+
+}
+
+.overview-header .chip {
+  padding: 4px 12px;
+  border: 1px solid var(--ink);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  justify-content: lflex-end;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+  margin-bottom: 12px;
+  padding: 10px;
+}
+
+.stats .statCard {
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid var(--green);
+  
+}
+
+.stats .stat-label {
+  font-size: 0.8rem;
+}
+
+.stats .stat-value {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.stats .stat-note {
+  font-size: 0.8rem;
+}
 
 
 
