@@ -12,14 +12,14 @@ const signInForm = document.getElementById("signInForm");
 const dashboardView = document.querySelector("#dashboardView");
 const userName = document.querySelector("#userDemoName");
 
-signInForm.addEventListener("click", (event) => {
-    event.preventDefault(); 
+signInForm.addEventListener("submit", (event) => {
+    event.preventDefault(); //stps the form's default action on submit: to reload the page
     const name = document.querySelector("#username-field").value.trim();
     
-    if(name === "") {
+    if(name === "") { //if input field is empty, stop
         return;
     } 
-    try {localStorage.setItem("displayName", name); }catch (e) {}
+    try {localStorage.setItem("displayName", name); }catch (e) {} 
 
     userName.textContent = name;
     signInView.classList.add("hidden");
