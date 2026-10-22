@@ -1,3 +1,5 @@
+
+const API_URL = "http://localhost:3005/expenses";
 const landingView = document.querySelector("#landingView");
 const signInView = document.querySelector("#signInCardView");
 const getStartedButton = document.querySelector("#getStartedButton");
@@ -123,3 +125,11 @@ expenseForm.addEventListener("submit", (event) => {
 expenseFormView.classList.add("hidden");
 
 })
+
+
+//async function to get expenses
+async function loadExpenses() {
+    const response = await fetch(API_URL);
+    const expenses = await response.json();
+    return expenses;
+}loadExpenses().then((data) => console.log(data));

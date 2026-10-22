@@ -1,0 +1,7 @@
+{
+  "expenses": [
+    { "id": "1", "description": "Semester fees", "amount": 15000, "category": "tuition", "date": "10-21-2026" },
+    { "id": "2", "description": "Textbooks", "amount": 3200, "category": "books", "date": "10-19-2026" },
+    { "id": "3", "description": "Lunch", "amount": 250, "category": "dining", "date": "10-23-2026" }
+  ]
+}
