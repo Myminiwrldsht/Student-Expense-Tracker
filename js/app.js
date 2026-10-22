@@ -32,10 +32,10 @@ const addExpenseButton = document.querySelector("#addExpenseButton");
 //     dashboardView.classList.remove("hidden");
 // });
 
-addExpenseButton.addEventListener("click", (event) => {
-    event.preventDefault();
-    expenseFormView.classList.remove("hidden");
-})
+// addExpenseButton.addEventListener("click", (event) => {
+//     event.preventDefault();
+//     expenseFormView.classList.remove("hidden");
+// })
 
 // function that turns all views off, only turns the active views on
 
@@ -68,8 +68,16 @@ signInForm.addEventListener("submit", (event) => {
     };
 
     try{localStorage.setItem("displayName", name) }catch (error) {};
-userName.textContent = name;
-    showView(dashboardView);
+
+const saved = localStorage.getItem("displayName");
+if(saved) {
+    userName.textContent=saved;
+    showView(homeView);
+}
+
 });
 
+addExpenseButton.addEventListener("submit", (event) => {
+    
+})
 
