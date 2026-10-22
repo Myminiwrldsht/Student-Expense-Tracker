@@ -17,6 +17,9 @@
 }
 
 /**/
+.hidden {
+  display: none !important;
+}
 
 html {
   scroll-behavior: smooth;
@@ -28,7 +31,11 @@ html {
   border: 1px solid rgba(255, 255, 255, 0.6);
   box-shadow: 0 8px 32px rgba(18, 53, 36, 0.12);
   border-radius: 12px;
-  margin: 60px;
+  margin: 60px auto;
+  width: fit-content;
+  min-width: 320px;
+  
+
 }
 
 
@@ -260,6 +267,8 @@ body {
   font-family: sans-serif;
 }
 
+
+
 .dash-actions button {
   padding: 12px;
   border: none;
@@ -272,7 +281,7 @@ body {
 }
 
 .dash-actions button:hover {
-  background: var(--green-light);
+  background-color: var(--green-light);
   color: var(--ink);
 }
 
@@ -407,7 +416,8 @@ body {
 /*Media queries*/
 @media (max-width: 600px) {
   .glass {
-    margin: 20px 16px;
+    margin: 20px;
+    max-width: fit-content;
   }
 
   .hero.glass {

@@ -6,6 +6,11 @@ const signInForm = document.getElementById("signInForm");
 const dashboardView = document.querySelector("#dashboardView");
 const userName = document.querySelector("#userDemoName");
 
+const expenseFormView =document.querySelector("#expenseFormView");
+const addExpenseButton = document.querySelector("#addExpenseButton");
+
+
+
 getStartedButton.addEventListener("click", (event) => {
     event.preventDefault(); //restrict the browser's default behaviour, jumping to #getStartrd
     landingView.classList.add("hidden"); //hides the landing view upon clicking the "Get Started" button
@@ -25,4 +30,11 @@ signInForm.addEventListener("submit", (event) => {
     userName.textContent = name;
     signInView.classList.add("hidden");
     dashboardView.classList.remove("hidden");
+});
+
+addExpenseButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    expenseFormView.classList.remove("hidden");
 })
+
+
