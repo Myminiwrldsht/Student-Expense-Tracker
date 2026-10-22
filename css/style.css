@@ -71,6 +71,8 @@ body {
  border-radius: 10px;
  background: rgba(255, 255, 255, 0.7);
  font-family: sans-serif;
+ border-color: var(--green);
+ outline: none ;
 
 
 }
@@ -206,6 +208,80 @@ font-family: sans-serif;
   color: var(--ink);
   
 }
+
+#dashboardView .dash-header {
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+gap: 16px;
+flex-wrap: wrap;
+padding: 24px 32px;
+font-weight: lighter;
+}
+.dash-header h2 {
+   font-size: clamp(2rem, 7vw, 3rem);
+   
+
+}
+
+
+.dash-header .eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--green);
+
+}
+
+.dash-header .subtitle {
+  color: var(--green);
+
+}
+
+.dash-header .dash-actions {
+
+  gap: 24px; /*same as the nav links*/ 
+  display: flex;
+}
+
+.dash-actions #semesterSelection {
+  padding: 12px;
+  border: none;
+  border-radius: 30px;
+  background: var(--green);
+  color: #fff;
+  font-family: sans-serif;
+}
+
+.dash-actions button {
+  padding: 12px;
+  border: none;
+  border-radius: 30px;
+  background: var(--green);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-family: sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 600px) {
   .glass {
