@@ -1,4 +1,4 @@
-/* Page colors variable */
+/* Page colors(green theme) variable */
 :root {
   --green: #1F7A4D; /* Main branding green: buttons, links, active states*/
   --green-light: #3DBE74;/* Lighter green: accents and highlights*/
@@ -47,6 +47,67 @@ body {
   display: none !important;
 
 }
+
+#signInForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 32px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#signInForm Label {
+  font-weight: 600;
+  color: var(--ink);
+  font-family: sans-serif;
+
+
+}
+
+#signInForm input {
+ padding: 12px 14px;
+ border: 1px solid rgba(18, 53, 36, 0.25);
+ border-radius: 10px;
+ background: rgba(255, 255, 255, 0.7);
+ font-family: sans-serif;
+
+
+}
+
+.btn-2 {
+  padding: 12px;
+  border: none;
+  border-radius: 30px;
+  background: var(--green);
+  color: #fff;
+cursor: pointer;
+transition: background-color 0.2s ease;
+font-family: sans-serif;
+  
+}
+
+.btn-2:hover {
+  font-size: larger;
+  background: var(--green-light);
+  color: var(--ink);
+}
+
+.note {
+  text-align: center;
+  padding: 10px;
+  color: var(--ink);
+  font-family: sans-serif;
+}
+
+
+
+
+
+
+
+
+
 
 .logo-container {
   display: flex;
