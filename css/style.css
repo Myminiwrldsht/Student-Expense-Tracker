@@ -516,7 +516,14 @@ body {
 
  }
 
-
+.landingViewGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+  margin-bottom: 12px;
+  padding: 10px;
+}
 
 
 
