@@ -24,34 +24,6 @@ const remainingNote = document.querySelector("#remainingNote");
 
 //filter category
  const categoryFilter = document.querySelector("#categoryFilter");
-// getStartedButton.addEventListener("click", (event) => {
-//     event.preventDefault(); //restrict the browser's default behaviour, jumping to #getStartrd
-//     landingView.classList.add("hidden"); //hides the landing view upon clicking the "Get Started" button
-//     signInView.classList.remove("hidden"); //reveals the sign in form/view upon clicking the "Get Started" button
-// });
-
-
-// signInForm.addEventListener("submit", (event) => {
-//     event.preventDefault(); //stps the form's default action on submit: to reload the page
-//     const name = document.querySelector("#username-field").value.trim();
-    
-//     if(name === "") { //if input field is empty, stop
-//         return;
-//     } 
-//     try {localStorage.setItem("displayName", name); }catch (error) {} 
-
-//     userName.textContent = name;
-//     signInView.classList.add("hidden");
-//     dashboardView.classList.remove("hidden");
-// });
-
-// addExpenseButton.addEventListener("click", (event) => {
-//     event.preventDefault();
-//     expenseFormView.classList.remove("hidden");
-// })
-
-// function that turns all views off, only turns the active views on
-
 function showView(viewToshow) {
 
     //hide every major view
@@ -266,11 +238,13 @@ const categoryLabels = {
     campuslife: "Campus life"
 }
 
+//format amount to Ksh
 function formatKsh(amount) {
     return `Ksh. ${amount.toLocaleString("en-KE")}`;
 
 }
 
+//get category totals
 function getCategoryTotals(expenses)  {
 const totals = {};
 expenses.forEach((expense) => {
