@@ -34,6 +34,69 @@
       "category": "books",
       "date": "2026-10-20",
       "id": "7sTuoYWUH5I"
+    },
+    {
+      "description": "Lunch",
+      "amount": 112,
+      "category": "dining",
+      "date": "2026-10-23",
+      "id": "Zf0m5_HOiGY"
+    },
+    {
+      "description": "Lunch",
+      "amount": 112,
+      "category": "dining",
+      "date": "2026-10-23",
+      "id": "EEV8wWi0H6U"
+    },
+    {
+      "description": "Bought some books",
+      "amount": 1000,
+      "category": "books",
+      "date": "2026-10-23",
+      "id": "Wyh33lzbVqo"
+    },
+    {
+      "description": "Bought some books",
+      "amount": 1000,
+      "category": "books",
+      "date": "2026-10-23",
+      "id": "-jqOQKsVrck"
+    },
+    {
+      "description": "Bought some books",
+      "amount": 1013,
+      "category": "books",
+      "date": "2026-10-23",
+      "id": "C8-3E71cY8k"
+    },
+    {
+      "description": "Paid fees",
+      "amount": 5000,
+      "category": "tuition",
+      "date": "2026-10-23",
+      "id": "rGhu2grZufg"
+    },
+    {
+      "description": "lunch",
+      "amount": 150,
+      "category": "dining",
+      "date": "2026-10-22",
+      "id": "vmwsQs8rGRs"
+    },
+    {
+      "description": "lunch",
+      "amount": 150,
+      "category": "dining",
+      "date": "2026-10-22",
+      "id": "1XHSV5qomsM"
+    },
+    {
+      "description": "fare",
+      "amount": 200,
+      "category": "campuslife",
+      "date": "2026-10-23",
+      "id": "piaEKLgOzVQ"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

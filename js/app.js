@@ -1,5 +1,5 @@
 
-const API_URL = "http://localhost:3005/expenses";
+const API_URL = "https://myminiwrldsht.github.io/Student-Expense-Tracker/db.json";
 const landingView = document.querySelector("#landingView");
 const signInView = document.querySelector("#signInCardView");
 const getStartedButton = document.querySelector("#getStartedButton");
@@ -98,7 +98,7 @@ addExpenseButton.addEventListener("click", () => {
 expenseForm.addEventListener("submit", async (event) => {
     formMessage.textContent = "";// clears old error messages 
     event.preventDefault();
-
+//description
     const description = document.querySelector("#description").value.trim();
 
     if(description === "") {
@@ -106,6 +106,7 @@ expenseForm.addEventListener("submit", async (event) => {
         return;
     }
 
+    //amount
     const amount = Number(document.querySelector("#amount").value);//converts to a number
 
     if(amount < 50) {
@@ -113,6 +114,7 @@ expenseForm.addEventListener("submit", async (event) => {
         return; //stop here
     }
 
+    //category
     const category =document.querySelector("#category").value;
 
     if(category === "") {
@@ -249,13 +251,6 @@ async function refreshDashboard() {
     renderExpenses(expenses);
     updateStatCards(expenses);
 }
-
-
-
-
-
-
-
 
 
 
