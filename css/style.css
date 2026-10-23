@@ -42,7 +42,7 @@ html {
 body {
   font-family: sans-serif;
   background-color: var(--bg);
-  background-image: url('../assets/student3.png');
+  /*background-image: url('../assets/student3.png');*/
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -401,7 +401,26 @@ body {
 }
 
 
+.table-wrap {
+  overflow-x: auto;
+  margin-top: 10px;
+}
 
+.expense-table th, .expense-table td {
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+}
+
+.expense-table th {
+  color: var(--green);
+  border-bottom: 2px solid var(--green);
+  border-right: 2px solid rgba(32, 75, 61, 0.12);
+}
+
+.expense-table td {
+  border-bottom: 2px solid rgba(32, 75, 61, 0.12);
+  border-left:  2px solid rgba(32, 75, 61, 0.12) ;
+}
 
 
 
