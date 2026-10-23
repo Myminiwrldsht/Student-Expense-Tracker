@@ -1,5 +1,5 @@
 
-const API_URL = "https://myminiwrldsht.github.io/Student-Expense-Tracker/db.json";
+const API_URL = "http://localhost:3005/expenses";
 const landingView = document.querySelector("#landingView");
 const signInView = document.querySelector("#signInCardView");
 const getStartedButton = document.querySelector("#getStartedButton");
@@ -17,7 +17,7 @@ const totalSpent = document.querySelector("#totalSpent");
 const toSpendNote = document.querySelector("#toSpendNote");
 const largestCategory = document.querySelector("#largestCategory");
 const largestNote = document.querySelector("#largestNote");
-const BudgetUsed = document.querySelector("#budgetUsed");
+const budgetUsed = document.querySelector("#budgetUsed");
 const budgetStatus = document.querySelector("#budgetStatus");
 const remaining = document.querySelector("#remaining");
 const remainingNote = document.querySelector("#remainingNote");
@@ -196,7 +196,7 @@ function updateStatCards(expenses) {
     totalSpent.textContent = formatKsh(total);
 
     //remaining card
-    const remaining = semesterBudget - total;
+    const left = semesterBudget - total;
     const percentageUsed = Math.round((total / semesterBudget) * 100);
 
     //to spend note
@@ -205,7 +205,7 @@ function updateStatCards(expenses) {
     : `${formatKsh(Math.abs(left))} over budget`;
 
     //budget used
-    BudgetUsed.textContent = `${percentageUsed}%`;
+    budgetUsed.textContent = `${percentageUsed}%`;
 
     remaining.textContent = left >= 0 ? `${100 - percentageUsed}%` : "0%";
     remainingNote.textContent = left >= 0
@@ -272,4 +272,4 @@ if(saved) {
     showView(dashboardView);
 }
 
-loadExpenses().then(() => refreshDashboard());
+refreshDashboard();
