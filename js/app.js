@@ -12,7 +12,7 @@ const expenseFormView =document.querySelector("#expenseFormView");
 const addExpenseButton = document.querySelector("#addExpenseButton");
 const expenseForm = document.getElementById("expenseForm");
 const formMessage = document.querySelector("#formMessage");
-
+const expenseList =document.querySelector("#expenseList");
 // getStartedButton.addEventListener("click", (event) => {
 //     event.preventDefault(); //restrict the browser's default behaviour, jumping to #getStartrd
 //     landingView.classList.add("hidden"); //hides the landing view upon clicking the "Get Started" button
@@ -132,4 +132,32 @@ async function loadExpenses() {
     const response = await fetch(API_URL);
     const expenses = await response.json();
     return expenses;
-}loadExpenses().then((data) => console.log(data));
+}
+
+
+//recent expenses
+function renderExpenses(expenses) {
+    expenseList.innerHTML = "";//clear the form to add new expenses instead of adding the old stored expenses
+
+    if(expenses.length === 0) {
+        const message= document.createElement("li");
+ message.textContent= "No expenses yet";
+        expenseList.appendChild(message);
+
+        return;
+    };
+
+    expenses.forEach((expense) => {
+        const item = document.createElement("li");
+
+        
+        item.textContent = `${expense.description} - Ksh. ${expense.amount} - ${expense.category} - ${expense.date}`
+        expenseList.appendChild(item);
+    });
+}
+
+
+
+
+
+loadExpenses().then((data) => renderExpenses(data));
