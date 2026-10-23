@@ -1,4 +1,4 @@
-const API_URL = "https://myminiwrldsht.github.io/Student-Expense-Tracker/db.json";
+const API_URL = "https://typicode.com";
 
 const landingView = document.querySelector("#landingView");
 const signInView = document.querySelector("#signInCardView");
