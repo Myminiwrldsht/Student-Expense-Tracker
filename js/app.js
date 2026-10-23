@@ -13,6 +13,14 @@ const addExpenseButton = document.querySelector("#addExpenseButton");
 const expenseForm = document.getElementById("expenseForm");
 const formMessage = document.querySelector("#formMessage");
 const expenseList =document.querySelector("#expenseList");
+const totalSpent = document.querySelector("#totalSpent");
+const toSpendNote = document.querySelector("#toSpendNote");
+const largestCategory = document.querySelector("#largestCategory");
+const largestNote = document.querySelector("#largestNote");
+const BudgetUsed = document.querySelector("#budgetUsed");
+const budgetStatus = document.querySelector("#budgetStatus");
+const remaining = document.querySelector("#remaining");
+const remainingNote = document.querySelector("#remainingNote");
 // getStartedButton.addEventListener("click", (event) => {
 //     event.preventDefault(); //restrict the browser's default behaviour, jumping to #getStartrd
 //     landingView.classList.add("hidden"); //hides the landing view upon clicking the "Get Started" button
@@ -73,7 +81,7 @@ signInForm.addEventListener("submit", (event) => {
 
 
 
-    userName.textContent=saved;
+    userName.textContent= name;
     showView(dashboardView);
 
 
@@ -120,7 +128,7 @@ expenseForm.addEventListener("submit", async (event) => {
 
     const expense = {description, amount, category, date };
     await addExpense(expense);
-    renderExpenses(await loadExpenses());
+    await refreshDashboard();
     expenseForm.reset(); 
 
 expenseFormView.classList.add("hidden");
@@ -157,6 +165,101 @@ function renderExpenses(expenses) {
     });
 }
 
+//card stats functions:
+const semesterBudget = 40000;
+const categoryLabels = {
+    tuition: "Tuition",
+    books: "Books",
+    dining: "Dining",
+    campuslife: "Campus life"
+}
+
+function formatKsh(amount) {
+    return `Ksh. ${amount.toLocaleString("en-KE")}`;
+
+}
+
+function getCategoryTotals(expenses)  {
+const totals = {};
+expenses.forEach((expense) => {
+    totals[expense.category] = (totals[expense.category] || 0) + expense.amount;
+});
+return totals;
+}
+
+//update stat cards
+function updateStatCards(expenses) {
+    //total spent card
+    const total = expenses.reduce((sum, expense) => sum + expense.amount, 0);
+    totalSpent.textContent = formatKsh(total);
+
+    //remaining card
+    const remaining = semesterBudget - total;
+    const percentageUsed = Math.round((total / semesterBudget) * 100);
+
+    //to spend note
+    toSpendNote.textContent = left >=0 
+    ? `${formatKsh(left)} left to spend`
+    : `${formatKsh(Math.abs(left))} over budget`;
+
+    //budget used
+    BudgetUsed.textContent = `${percentageUsed}%`;
+
+    remaining.textContent = left >= 0 ? `${100 - percentageUsed}%` : "0%";
+    remainingNote.textContent = left >= 0
+    ? "of your semester budget"
+    : "You've passed your budget";
+
+    //largest category
+    if(expenses.length === 0) {
+        largestCategory.textContent = "No expenses yet";
+        largestNote.textContent = "No expenses yet";
+
+    }
+    else {
+        const totals = getCategoryTotals(expenses);
+        const [topKey, topAmount] = Object.entries(totals)
+        .sort((a, b)=> b[1] - a[1]) [0];
+        const share = Math.round((topAmount / total) * 100);
+
+
+        largestCategory.textContent = categoryLabels[topKey.toLowerCase()] || topKey;
+        largestNote.textContent = `${share}% of your spending`;
+
+      
+
+    }
+      //status card
+        if(percentageUsed > 100) {
+            budgetStatus.textContent = "Over budget";
+
+        } 
+        else if(percentageUsed >= 80) {
+            budgetStatus.textContent = "Close to budget limit";
+        }
+        else {
+            budgetStatus.textContent = "Within Budget";
+        }
+}
+
+//Async function to refresh dashboard
+
+async function refreshDashboard() {
+    const expenses = await loadExpenses();
+    renderExpenses(expenses);
+    updateStatCards(expenses);
+}
+
+
+
+
+
+
+
+
+
+
+
 //addExpense (POST)
 async function addExpense(expense) {
     const response = await fetch(API_URL, {
@@ -174,4 +277,4 @@ if(saved) {
     showView(dashboardView);
 }
 
-loadExpenses().then((data) => renderExpenses(data));
+loadExpenses().then(() => refreshDashboard());
