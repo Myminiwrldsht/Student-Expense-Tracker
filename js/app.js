@@ -175,19 +175,38 @@ function renderExpenses(expenses) {
     expenseList.innerHTML = "";//clear the form to add new expenses instead of adding the old stored expenses
 
     if(expenses.length === 0) {
-        const message= document.createElement("li");
- message.textContent= "No expenses yet";
-        expenseList.appendChild(message);
-
-        return;
+        const row = document.createElement("tr");
+        const cell = document.createElement("td");
+        cell.colSpan = 4;//number of columns
+        cell.textContent = "No expenses yet";
+        row.appendChild(cell);
+        expenseList.appendChild(row);
+        return;//stop function block
     };
 
     expenses.forEach((expense) => {
-        const item = document.createElement("li");
+        const row = document.createElement("tr");
+
+        //description cell
+        const descriptionCell = document.createElement("td");
+        descriptionCell.textContent = expense.description;
+        //category cell
+        const categoryCell = document.createElement("td");
+        categoryCell.textContent = expense.category;
+        //amount cell
+        const amountCell = document.createElement("td");
+        amountCell.textContent = formatKsh(expense.amount);
+        //date cell
+        const dateCell = document.createElement("td");
+        dateCell.textContent = expense.date;
+
+        row.appendChild(descriptionCell);
+        row.appendChild(categoryCell);
+        row.appendChild(amountCell);
+        row.appendChild(dateCell);
 
         
-        item.textContent = `${expense.description}: AMOUNT: Ksh. ${expense.amount} CATEGORY: ${expense.category} DATE: ${expense.date}`
-        expenseList.appendChild(item);
+       expenseList.appendChild(row);
     });
 }
 
