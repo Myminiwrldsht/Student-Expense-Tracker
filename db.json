@@ -29,13 +29,6 @@
       "id": "vmwsQs8rGRs"
     },
     {
-      "description": "lunch",
-      "amount": 150,
-      "category": "dining",
-      "date": "2026-10-22",
-      "id": "1XHSV5qomsM"
-    },
-    {
       "description": "Bought some books",
       "amount": 120,
       "category": "books",
@@ -69,6 +62,20 @@
       "category": "dining",
       "date": "2026-10-23",
       "id": "Apba3QxjGL0"
+    },
+    {
+      "description": "lunch",
+      "amount": 1000,
+      "category": "dining",
+      "date": "2026-10-23",
+      "id": "IH6v1HHPJLw"
+    },
+    {
+      "description": "Bought some books",
+      "amount": 983,
+      "category": "books",
+      "date": "2026-10-23",
+      "id": "oo8if9FvyLc"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
