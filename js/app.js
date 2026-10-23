@@ -140,8 +140,11 @@ expenseForm.addEventListener("submit", async (event) => {
 //async function to get expenses
 async function loadExpenses() {
     const response = await fetch(API_URL);
-    const expenses = await response.json();
-    return expenses;
+    if (!response.ok) {
+        throw new Error(`Server replied with ${response.status}`);
+    }
+    const data = await response.json();
+    return Array.isArray(data) ? data : (data.expenses || []);
 }
 
 //allexpenses filter: all expenses from the server, remembered so that filter can use them
@@ -310,7 +313,7 @@ function updateStatCards(expenses) {
 //Async function to refresh dashboard
 
 async function refreshDashboard() {
-    allExpenses = (await loadExpenses() || []);
+    allExpenses = await loadExpenses();
     applyFilter();//table follows the dropdown
     updateStatCards(allExpenses); //cards always count everything
 }
