@@ -21,6 +21,9 @@ const budgetUsed = document.querySelector("#budgetUsed");
 const budgetStatus = document.querySelector("#budgetStatus");
 const remaining = document.querySelector("#remaining");
 const remainingNote = document.querySelector("#remainingNote");
+
+//filter category
+ const categoryFilter = document.querySelector("#categoryFilter");
 // getStartedButton.addEventListener("click", (event) => {
 //     event.preventDefault(); //restrict the browser's default behaviour, jumping to #getStartrd
 //     landingView.classList.add("hidden"); //hides the landing view upon clicking the "Get Started" button
@@ -169,7 +172,19 @@ async function loadExpenses() {
     return expenses;
 }
 
+//allexpenses filter: all expenses from the server, remembered so that filter can use them
+let allExpenses = [];
 
+function applyFilter() {
+const chosen = categoryFilter.value;
+
+const visible = chosen === "all"
+? allExpenses
+: allExpenses.filter((expense) =>expense.category === chosen);
+renderExpenses(visible);
+}
+
+categoryFilter.addEventListener("change", applyFilter);
 //recent expenses (GET)
 function renderExpenses(expenses) {
     expenseList.innerHTML = "";//clear the form to add new expenses instead of adding the old stored expenses
@@ -186,6 +201,8 @@ function renderExpenses(expenses) {
 
     expenses.forEach((expense) => {
         const row = document.createElement("tr");
+
+
 
         //description cell
         const descriptionCell = document.createElement("td");
@@ -320,9 +337,9 @@ function updateStatCards(expenses) {
 //Async function to refresh dashboard
 
 async function refreshDashboard() {
-    const expenses = await loadExpenses();
-    renderExpenses(expenses);
-    updateStatCards(expenses);
+    allExpenses = await loadExpenses();
+    applyFilter();//table follows the dropdown
+    updateStatCards(allExpenses); //cards always count everything
 }
 
 
