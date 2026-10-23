@@ -34,7 +34,7 @@ html {
   margin: 60px auto;
   width: fit-content;
   min-width: 320px;
-  
+
 
 }
 
@@ -42,7 +42,7 @@ html {
 body {
   font-family: sans-serif;
   background-color: var(--bg);
-  /*background-image: url('../assets/student3.png');*/
+  background-image: url('../assets/student3.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -310,7 +310,7 @@ body {
   border: 1px solid var(--ink);
   border-radius: 20px;
   font-size: 0.8rem;
-  justify-content: lflex-end;
+  justify-content: flex-end;
 }
 
 .stats {
@@ -357,12 +357,12 @@ body {
 #expenseForm label {
   font-weight: 600;
   color: var(--ink);
-  
+
 
 }
 
 #expenseForm input {
-   padding: 12px 14px;
+  padding: 12px 14px;
   border: 1px solid rgba(18, 53, 36, 0.25);
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.7);
@@ -375,7 +375,7 @@ body {
 #expenseForm button {
   padding: 12px;
   border: none;
-  border-radius:  30px;
+  border-radius: 30px;
   background-color: var(--green);
   color: #fff;
   cursor: pointer;
@@ -397,16 +397,17 @@ body {
 
 #expenseForm option {
   color: var(--green);
- 
+
 }
 
-
+/*recent expenses table*/
 .table-wrap {
   overflow-x: auto;
   margin-top: 10px;
 }
 
-.expense-table th, .expense-table td {
+.expense-table th,
+.expense-table td {
   padding: 0.6rem 0.8rem;
   text-align: left;
 }
@@ -419,7 +420,7 @@ body {
 
 .expense-table td {
   border-bottom: 2px solid rgba(32, 75, 61, 0.12);
-  border-left:  2px solid rgba(32, 75, 61, 0.12) ;
+  border-left: 2px solid rgba(32, 75, 61, 0.12);
 }
 
 .delete-btn {
@@ -430,7 +431,7 @@ body {
   transition: background 0.2s ease, color 0.2s ease;
   border-radius: 10px;
   border: 1px solid rgb(175, 46, 46);
-  
+
 }
 
 .delete-btn:hover {
@@ -439,8 +440,81 @@ body {
 
 }
 
+/*about section*/
+.about.glass {
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 120px 60px;
+}
+ .about h3 {
+     font-size: clamp(2rem, 7vw, 3rem);
+  /*sets the minimum width, preferred width and the maximum width respectively*/
+  overflow-wrap: break-word;
+  color: var(--ink);
+  text-align: center;
+ }
+
+ .about p {
+   max-width: 600px;
+  margin: 16px auto 24px;
+  /*"auto" centres the block*/
+  padding: 10px;
+ }
+
+ #howItWorks.glass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 120px 60px;
+ }
+
+ #howItWorks {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  align-items: center;
+
+ }
+
+ #howItWorks h3 {
+    text-align: center;
+    font-size: clamp(2rem, 7vw, 3rem);
+    margin-bottom: 50px;
+    color: var(--ink);
+ }
+
+ #howItWorks img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+
+ }
+.how-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+ #howItWorks ul {
+  text-align: left;
+ }
+
+ 
+ #howItWorks li {
+  list-style:circle;
+  text-align: left;
+  margin-bottom: 16px;
+  color: var(--ink);
+  font-size:medium;
+  font-weight:400
 
 
+
+ }
 
 
 
@@ -461,5 +535,9 @@ body {
   .navbar {
     flex-direction: column;
     gap: 12px;
+
+    .how-content {
+      flex-direction: column;
+    }
   }
 }

@@ -1,13 +1,6 @@
 {
   "expenses": [
     {
-      "id": "3",
-      "description": "Lunch",
-      "amount": 250,
-      "category": "dining",
-      "date": "2026-10-21"
-    },
-    {
       "description": "Bought some books",
       "amount": 187,
       "category": "books",
@@ -36,27 +29,6 @@
       "id": "EEV8wWi0H6U"
     },
     {
-      "description": "Bought some books",
-      "amount": 1000,
-      "category": "books",
-      "date": "2026-10-23",
-      "id": "Wyh33lzbVqo"
-    },
-    {
-      "description": "Bought some books",
-      "amount": 1000,
-      "category": "books",
-      "date": "2026-10-23",
-      "id": "-jqOQKsVrck"
-    },
-    {
-      "description": "Paid fees",
-      "amount": 5000,
-      "category": "tuition",
-      "date": "2026-10-23",
-      "id": "rGhu2grZufg"
-    },
-    {
       "description": "lunch",
       "amount": 150,
       "category": "dining",
@@ -69,27 +41,6 @@
       "category": "dining",
       "date": "2026-10-22",
       "id": "1XHSV5qomsM"
-    },
-    {
-      "description": "Lunch",
-      "amount": 1000,
-      "category": "dining",
-      "date": "2026-10-23",
-      "id": "uTbR2ye6OGc"
-    },
-    {
-      "description": "Graduation attire",
-      "amount": 3000,
-      "category": "campuslife",
-      "date": "2026-10-23",
-      "id": "5ex6dEdVagA"
-    },
-    {
-      "description": "Paid fees",
-      "amount": 40000,
-      "category": "tuition",
-      "date": "2026-10-22",
-      "id": "UcJoEfru6ZA"
     },
     {
       "description": "Bought some books",

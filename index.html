@@ -10,38 +10,61 @@
 
 <body>
 
-<!--Navigation bar-->
-<nav class="navbar">
-  <!--Logo-->
-  <div class="logo-container">
-        <img src="assets/moneywisely-icon.svg" class="logo-img" alt="">
-        <div class="text-block">
-    <span class="logo-text">Money<span class="logo-accent">Wisely</span></span>
-    <span class="short-description">STUDENT WORKSPACE</span>
+  <!--Navigation bar-->
+  <nav class="navbar">
+    <!--Logo-->
+    <div class="logo-container">
+      <img src="assets/moneywisely-icon.svg" class="logo-img" alt="">
+      <div class="text-block">
+        <span class="logo-text">Money<span class="logo-accent">Wisely</span></span>
+        <span class="short-description">STUDENT WORKSPACE</span>
+      </div>
     </div>
-  </div>
-  <ul class="nav-links">
-    <li><a href="#landingView" data-view="landingView">Home</a></li>
-    <li><a href="#signInForm" data-view="signInCardView">Get Started</a></li>
-    <li><a href="#dashboardView" data-view="dashboardView">Dashboard</a></li>
 
-  </ul>
-  
-</nav>
+    <!--Navigation bar links-->
+    <ul class="nav-links">
+      <li><a href="#landingView" data-view="landingView">Home</a></li>
+      <li><a href="#signInForm" data-view="signInCardView">Get Started</a></li>
+      <li><a href="#dashboardView" data-view="dashboardView">Dashboard</a></li>
+
+
+    </ul>
+
+  </nav>
 
 
   <!-- Page header -->
-   <div id="landingView">
-  <header class="hero glass" id="home">
-    <h1>Welcome to MoneyWisely</h1>
-    <p>Try MoneyWisely in demo mode where no passwords are needed. Track your campus-life expenses</p>
-    <a href="#signInForm" class="btn-1" id="getStartedButton">Get Started</a>
-  </header>
-</div>
+  <div id="landingView">
+    <header class="hero glass" id="home">
+      <h1>Welcome to MoneyWisely</h1>
+      <p>Try MoneyWisely in demo mode where no passwords are needed. Track your campus-life expenses</p>
+      <a href="#signInForm" class="btn-1" id="getStartedButton">Get Started</a>
+    </header>
+
+    <div class="about glass" id="about">
+      <h3>About</h3>
+      <p>MoneyWisely is a budget tracker specifically for campus students. We make campus life smoother by enabeling you to freely track your campus expenses without worries.</p>
+    </div>
+
+    <section class="how-it-works glass" id="howItWorks">
+      <h3>How It Works</h3>
+      <div class="how-content">
+      <img src="assets/7449922.png">
+      <ol>
+        <li>Create a demo name</li>
+        <li>Click the add expense button</li>
+        <li>Fill in every box in the expense form</li>
+        <li>Track your expenses using the recent expenses table</li>
+      </ol>
+      </div>
+    </section>
+    
+  </div>
+  
 
   <!-- Display-name input form/ sign-in card -->
   <section id="signInCardView" class="hidden glass">
-    
+
     <form id="signInForm">
       <label for="username-field">Display name</label>
       <input type="text" id="username-field" name="displayname" placeholder="Maya" maxlength="20" required>
@@ -54,115 +77,115 @@
   </section> <!--sign in form section closing tag-->
 
   <!--dashboard view-->
-<section id="dashboardView" class="hidden">
+  <section id="dashboardView" class="hidden">
 
-  <!--dashboard header-->
- <header class="dash-header">
-  <div>
-  <p class="eyebrow">YOUR SEMESTER, AT A GLANCE</p>
-  <h2>A clearer picture, <span id="userDemoName"></span></h2>
-  <p class="subtitle">Track tuition, books, meals, and campus life so you can stay on budget this semester.</p>
-  </div>
-  <div class="dash-actions">
-    <select id="semesterSelection">
-      <option>1st Semester</option>
-      <option>2nd Semester</option>
-    </select>
-    <button id="addExpenseButton" type="button">+ Add expense</button>
-  </div>
- </header>
-
-
-
-<!--expense form-->
-<section id="expenseFormView" class="hidden glass">
-  <form id="expenseForm">
-    <label for="description">Description</label>
-    <input type="text" id="description" name="description" placeholder="Bought some books..." required>
-
-    <label for="amount">Amount (Ksh)</label>
-    <input type="number" id="amount" name="amount" min="50" placeholder="100" required>
-
-    <label for="category">Category</label>
-    <select id="category" name="category" required>
-      <option value="">Choose a category</option>
-      <option value="tuition">Tuition</option>
-      <option value="books">Books</option>
-      <option value="dining">Dining</option>
-      <option value="campuslife">Campus life</option>
-    </select>
-
-    <label for="date">Date</label>
-    <input type="date" id="date" name="date" required>
-
-    <button type="submit">Add expense</button>
-
-<p id="formMessage" class="form-message"></p>
-  </form>
- 
-</section><!--form section closing tag-->
+    <!--dashboard header-->
+    <header class="dash-header">
+      <div>
+        <p class="eyebrow">YOUR SEMESTER, AT A GLANCE</p>
+        <h2>A clearer picture, <span id="userDemoName"></span></h2>
+        <p class="subtitle">Track tuition, books, meals, and campus life so you can stay on budget this semester.</p>
+      </div>
+      <div class="dash-actions">
+        <select id="semesterSelection">
+          <option>1st Semester</option>
+          <option>2nd Semester</option>
+        </select>
+        <button id="addExpenseButton" type="button">+ Add expense</button>
+      </div>
+    </header>
+    
 
 
-<!--overview card container-->
+    <!--expense form-->
+    <section id="expenseFormView" class="hidden glass">
+      <form id="expenseForm">
+        <label for="description">Description</label>
+        <input type="text" id="description" name="description" placeholder="Bought some books..." required>
 
-<section id="overview" class="overview glass">
-  
+        <label for="amount">Amount (Ksh)</label>
+        <input type="number" id="amount" name="amount" min="50" placeholder="100" required>
 
-  <div class="overview-header">
-    <h3>Semester spending overview</h3>
-    <span class="chip">1st semester</span>
-    <span class="chip" id="budgetStatus">Within budget</span>
-  </div>
- <!--overview stat cards-->
-  <div class="stats">
-    <div class="statCard">
-      <p class="stat-label">Total spent</p>
-      <p class="stat-value" id="totalSpent">Ksh.0</p>
-      <p class="stat-note" id="toSpendNote"></p>
-    </div>
-    <div class="statCard">
-      <p class="stat-label">Largest category</p>
-      <p class="stat-value" id="largestCategory">-</p>
-      <p class="stat-note" id="largestNote"></p>
-    </div>
-    <div class="statCard">
-      <p class="stat-label">Budget used</p>
-      <p class="stat-value" id="budgetUsed">0%</p>
-      <p class="stat-note">Keep room for essentials</p>
-    </div>
-    <div class="statCard">
-      <p class="stat-label">Remaining</p>
-      <p class="stat-value" id="remaining">Ksh.0</p>
-      <p class="stat-note" id="remainingNote"></p>
-    </div>
-  </div>
-<!--Recent expenses list-->
-  <h3> Recent expenses</h3>
-  <select id="categoryFilter">
-    <option value="all">All</option>
-    <option value="tuition">Tuition</option>
-    <option value="books">Books</option>
-    <option value="dining">Dining</option>
-    <option value="campuslife">Campus life</option>
-  </select>
-<div class = "table-wrap">
-  <table class="expense-table">
-    <thead>
-      <tr>
-        <th>Description</th>
-        <th>Category</th>
-        <th>Amount</th>
-        <th>Date</th>
-        <th>Action</th>
-      </tr>
-    </thead>
-    <tbody id="expenseList"></tbody>
-  </table>
-</div>
+        <label for="category">Category</label>
+        <select id="category" name="category" required>
+          <option value="">Choose a category</option>
+          <option value="tuition">Tuition</option>
+          <option value="books">Books</option>
+          <option value="dining">Dining</option>
+          <option value="campuslife">Campus life</option>
+        </select>
 
-</section> <!--overview cards section closing tag-->
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date" required>
 
- </section> <!--dashboardView section closing tag-->
+        <button type="submit">Add expense</button>
+
+        <p id="formMessage" class="form-message"></p>
+      </form>
+
+    </section><!--form section closing tag-->
+
+
+    <!--overview card container-->
+
+    <section id="overview" class="overview glass">
+
+
+      <div class="overview-header">
+        <h3>Semester spending overview</h3>
+        <span class="chip">1st semester</span>
+        <span class="chip" id="budgetStatus">Within budget</span>
+      </div>
+      <!--overview stat cards-->
+      <div class="stats">
+        <div class="statCard">
+          <p class="stat-label">Total spent</p>
+          <p class="stat-value" id="totalSpent">Ksh.0</p>
+          <p class="stat-note" id="toSpendNote"></p>
+        </div>
+        <div class="statCard">
+          <p class="stat-label">Largest category</p>
+          <p class="stat-value" id="largestCategory">-</p>
+          <p class="stat-note" id="largestNote"></p>
+        </div>
+        <div class="statCard">
+          <p class="stat-label">Budget used</p>
+          <p class="stat-value" id="budgetUsed">0%</p>
+          <p class="stat-note">Keep room for essentials</p>
+        </div>
+        <div class="statCard">
+          <p class="stat-label">Remaining</p>
+          <p class="stat-value" id="remaining">Ksh.0</p>
+          <p class="stat-note" id="remainingNote"></p>
+        </div>
+      </div>
+      <!--Recent expenses table-->
+      <h3> Recent expenses</h3>
+      <select id="categoryFilter">
+        <option value="all">All</option>
+        <option value="tuition">Tuition</option>
+        <option value="books">Books</option>
+        <option value="dining">Dining</option>
+        <option value="campuslife">Campus life</option>
+      </select>
+      <div class="table-wrap">
+        <table class="expense-table">
+          <thead>
+            <tr>
+              <th>Description</th>
+              <th>Category</th>
+              <th>Amount</th>
+              <th>Date</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="expenseList"></tbody>
+        </table>
+      </div>
+
+    </section> <!--overview cards section closing tag-->
+
+  </section> <!--dashboardView section closing tag-->
 
   <footer class="footer">
     <p>&copy; 2026 MoneyWisely. All rights reserved by Maya</p>
