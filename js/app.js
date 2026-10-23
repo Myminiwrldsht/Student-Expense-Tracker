@@ -71,11 +71,11 @@ signInForm.addEventListener("submit", (event) => {
 
     try{localStorage.setItem("displayName", name); }catch (error) {};
 
-const saved = localStorage.getItem("displayName");
-if(saved) {
+
+
     userName.textContent=saved;
     showView(dashboardView);
-}
+
 
 });
 
@@ -87,7 +87,7 @@ addExpenseButton.addEventListener("click", () => {
 });
 
 // expense form submit logic
-expenseForm.addEventListener("submit", (event) => {
+expenseForm.addEventListener("submit", async (event) => {
     formMessage.textContent = "";// clears old error messages 
     event.preventDefault();
 
@@ -119,7 +119,8 @@ expenseForm.addEventListener("submit", (event) => {
     }
 
     const expense = {description, amount, category, date };
-    console.log(expense);
+    await addExpense(expense);
+    renderExpenses(await loadExpenses());
     expenseForm.reset(); 
 
 expenseFormView.classList.add("hidden");
@@ -135,7 +136,7 @@ async function loadExpenses() {
 }
 
 
-//recent expenses
+//recent expenses (GET)
 function renderExpenses(expenses) {
     expenseList.innerHTML = "";//clear the form to add new expenses instead of adding the old stored expenses
 
@@ -151,13 +152,26 @@ function renderExpenses(expenses) {
         const item = document.createElement("li");
 
         
-        item.textContent = `${expense.description} - Ksh. ${expense.amount} - ${expense.category} - ${expense.date}`
+        item.textContent = `${expense.description}: AMOUNT: Ksh. ${expense.amount} CATEGORY: ${expense.category} DATE: ${expense.date}`
         expenseList.appendChild(item);
     });
 }
 
+//addExpense (POST)
+async function addExpense(expense) {
+    const response = await fetch(API_URL, {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(expense)
+    });
+    return await response.json();
+}
 
-
-
+let saved = null;
+try {saved = localStorage.getItem("displayName")} catch (error) {}
+if(saved) {
+    userName.textContent = saved;
+    showView(dashboardView);
+}
 
 loadExpenses().then((data) => renderExpenses(data));

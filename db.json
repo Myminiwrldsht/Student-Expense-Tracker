@@ -1,7 +1,40 @@
 {
   "expenses": [
-    { "id": "1", "description": "Semester fees", "amount": 15000, "category": "tuition", "date": "2026-10-07" },
-    { "id": "2", "description": "Textbooks", "amount": 3200, "category": "books", "date": "2026-10-19" },
-    { "id": "3", "description": "Lunch", "amount": 250, "category": "dining", "date": "2026-10-21" }
-  ]
+    {
+      "id": "1",
+      "description": "Semester fees",
+      "amount": 15000,
+      "category": "tuition",
+      "date": "2026-10-07"
+    },
+    {
+      "id": "2",
+      "description": "Textbooks",
+      "amount": 3200,
+      "category": "books",
+      "date": "2026-10-19"
+    },
+    {
+      "id": "3",
+      "description": "Lunch",
+      "amount": 250,
+      "category": "dining",
+      "date": "2026-10-21"
+    },
+    {
+      "description": "Bought some books",
+      "amount": 187,
+      "category": "books",
+      "date": "2026-10-20",
+      "id": "xA31ShhOzT4"
+    },
+    {
+      "description": "Bought some books",
+      "amount": 162,
+      "category": "books",
+      "date": "2026-10-20",
+      "id": "7sTuoYWUH5I"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
