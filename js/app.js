@@ -1,5 +1,5 @@
-const API_URL = "https://typicode.com";
 
+const API_URL = "http://localhost:3005/expenses";
 const landingView = document.querySelector("#landingView");
 const signInView = document.querySelector("#signInCardView");
 const getStartedButton = document.querySelector("#getStartedButton");
