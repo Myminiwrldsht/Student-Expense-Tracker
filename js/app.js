@@ -206,6 +206,7 @@ function renderExpenses(expenses) {
         const deleteButton = document.createElement("button");
          deleteButton.textContent = "Delete";
          deleteButton.type = "button";
+         deleteButton.classList.add("delete-btn");
 
           deleteButton.addEventListener("click", async () => {
         if(!confirm("Delete this expense?")) {
