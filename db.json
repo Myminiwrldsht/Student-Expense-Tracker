@@ -104,6 +104,13 @@
       "category": "dining",
       "date": "2026-10-23",
       "id": "uTbR2ye6OGc"
+    },
+    {
+      "description": "Graduation attire",
+      "amount": 3000,
+      "category": "campuslife",
+      "date": "2026-10-23",
+      "id": "5ex6dEdVagA"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

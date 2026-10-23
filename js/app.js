@@ -87,6 +87,30 @@ signInForm.addEventListener("submit", (event) => {
 
 });
 
+const navLinks = document.querySelectorAll("[data-view]");
+
+navLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        //read saved name fresh, every click
+        let savedName = null;
+        try { savedName = localStorage.getItem("displayName"); } catch (error) {}
+
+        //dashboard link clicked with no name is saved
+        if(link.dataset.view === "dashboardView" && !savedName) { //$$- both parts must be true
+            showView(signInView);
+            return; //stop listener
+
+        }
+        const target = document.getElementById(link.dataset.view);
+        showView(target);
+    });//close click listener
+
+        
+    }); //close for each
+
+
 
 
 //expense form event listener
