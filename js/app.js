@@ -310,7 +310,7 @@ function updateStatCards(expenses) {
 //Async function to refresh dashboard
 
 async function refreshDashboard() {
-    allExpenses = await loadExpenses();
+    allExpenses = (await loadExpenses() || []);
     applyFilter();//table follows the dropdown
     updateStatCards(allExpenses); //cards always count everything
 }

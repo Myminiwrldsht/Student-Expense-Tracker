@@ -48,6 +48,13 @@
       "category": "books",
       "date": "2026-10-21",
       "id": "6MknCLw9_K0"
+    },
+    {
+      "description": "Bought some books",
+      "amount": 1000,
+      "category": "books",
+      "date": "2026-10-23",
+      "id": "g-G4DthEZdo"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
