@@ -1,20 +1,6 @@
 {
   "expenses": [
     {
-      "id": "1",
-      "description": "Semester fees",
-      "amount": 15000,
-      "category": "tuition",
-      "date": "2026-10-07"
-    },
-    {
-      "id": "2",
-      "description": "Textbooks",
-      "amount": 3200,
-      "category": "books",
-      "date": "2026-10-19"
-    },
-    {
       "id": "3",
       "description": "Lunch",
       "amount": 250,
@@ -64,13 +50,6 @@
       "id": "-jqOQKsVrck"
     },
     {
-      "description": "Bought some books",
-      "amount": 1013,
-      "category": "books",
-      "date": "2026-10-23",
-      "id": "C8-3E71cY8k"
-    },
-    {
       "description": "Paid fees",
       "amount": 5000,
       "category": "tuition",
@@ -90,13 +69,6 @@
       "category": "dining",
       "date": "2026-10-22",
       "id": "1XHSV5qomsM"
-    },
-    {
-      "description": "fare",
-      "amount": 200,
-      "category": "campuslife",
-      "date": "2026-10-23",
-      "id": "piaEKLgOzVQ"
     },
     {
       "description": "Lunch",

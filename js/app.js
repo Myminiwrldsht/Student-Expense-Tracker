@@ -177,12 +177,12 @@ function renderExpenses(expenses) {
     if(expenses.length === 0) {
         const row = document.createElement("tr");
         const cell = document.createElement("td");
-        cell.colSpan = 4;//number of columns
+        cell.colSpan = 5;//number of columns
         cell.textContent = "No expenses yet";
         row.appendChild(cell);
         expenseList.appendChild(row);
         return;//stop function block
-    };
+    }
 
     expenses.forEach((expense) => {
         const row = document.createElement("tr");
@@ -192,22 +192,51 @@ function renderExpenses(expenses) {
         descriptionCell.textContent = expense.description;
         //category cell
         const categoryCell = document.createElement("td");
-        categoryCell.textContent = expense.category;
+        categoryCell.textContent = categoryLabels[expense.category] || expense.category;
         //amount cell
         const amountCell = document.createElement("td");
         amountCell.textContent = formatKsh(expense.amount);
         //date cell
         const dateCell = document.createElement("td");
         dateCell.textContent = expense.date;
+       
+        //action cell
+        const actionCell = document.createElement("td");
+        //delete button
+        const deleteButton = document.createElement("button");
+         deleteButton.textContent = "Delete";
+         deleteButton.type = "button";
+
+          deleteButton.addEventListener("click", async () => {
+        if(!confirm("Delete this expense?")) {
+            return;
+        }
+        await deleteExpense(expense.id);
+        await refreshDashboard();
+
+        })
+
+        
 
         row.appendChild(descriptionCell);
         row.appendChild(categoryCell);
         row.appendChild(amountCell);
         row.appendChild(dateCell);
+        actionCell.appendChild(deleteButton);
+        row.appendChild(actionCell);
 
         
        expenseList.appendChild(row);
     });
+}
+
+//Delete expense function
+
+async function deleteExpense(id) {
+    await fetch(`${API_URL}/${id}`, {
+        method: "DELETE"
+    });
+
 }
 
 //card stats functions:
